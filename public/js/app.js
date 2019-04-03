@@ -1904,7 +1904,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vee_validate__WEBPACK_IMPORTED_MODULE_1__["default"]);
@@ -1925,9 +1924,6 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vee_validate__WEBPACK_IMPORTED_MO
       value: [],
       body: '',
       custom: {
-        body: {
-          required: '感想を入力しましょう！'
-        },
         select: {
           required: 'カテゴリを選択してください'
         }
@@ -49121,14 +49117,6 @@ var render = function() {
                     { attrs: { avatar: "" } },
                     [
                       _c("v-textarea", {
-                        directives: [
-                          {
-                            name: "validate",
-                            rawName: "v-validate",
-                            value: "required",
-                            expression: "'required'"
-                          }
-                        ],
                         attrs: {
                           "error-messages": _vm.errors.collect("body"),
                           label: "感想",

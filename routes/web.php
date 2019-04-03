@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/{vue_capture?}', function () {
+// Route::get('/{vue_capture?}', function () {
+//     return view('home');
+// })->where('vue_capture', '[\/\w\.-]*');
+
+Auth::routes();
+
+Route::get('/', function () {
     return view('home');
-})->where('vue_capture', '[\/\w\.-]*');
+})->name('home');
+
+Route::post('/logout', 'Auth\LoginController@logout')->name('logout');

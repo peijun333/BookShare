@@ -3,6 +3,7 @@
     <v-navigation-drawer v-model="drawer" clipped fixed app>
       <v-list dense>
         <r-link linkname="home"></r-link>
+        <r-link linkname="post"></r-link>
       </v-list>
     </v-navigation-drawer>
 
@@ -35,7 +36,7 @@
 export default {
   props: {
     name: String,
-    logout: "http://localhost:8000/login"
+    logout: String
   },
 
   data: () => ({

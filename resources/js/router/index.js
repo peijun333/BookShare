@@ -1,25 +1,26 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-Vue.use(Router)
+import Vue from "vue";
+import Router from "vue-router";
+Vue.use(Router);
 
-import switch_component from '../components/SwitchComponent.vue'
-import r_link            from '../components/RouterLink.vue'
+import switch_component from "../components/SwitchComponent.vue";
+import r_link from "../components/RouterLink.vue";
 
-Vue.component('switch-component', switch_component)
-Vue.component('r-link', r_link)
+Vue.component("switch-component", switch_component);
+Vue.component("r-link", r_link);
 
-import home from '../components/HomeComponent.vue'
+import home from "../components/HomeComponent.vue";
 
 export default new Router({
-    mode: 'history',
+    mode: "history",
     routes: [
         {
-            path: '/',             
-            name: 'home',          
-            component: home,          
+            path: "/",
+            name: "home",
+            component: home,
             meta: {
-                name: 'ホーム',   
-                icon: 'home'
-            }},
-  ],
-})
+                name: "ホーム",
+                icon: "home"
+            }
+        }
+    ]
+});

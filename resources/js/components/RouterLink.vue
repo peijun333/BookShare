@@ -12,27 +12,26 @@
 </template>
 
 <script>
-  export default {
-    name: 'routerlink',
-    props: {
-      linkname: String,
-    },
+export default {
+  name: "routerlink",
+  props: {
+    linkname: String
+  },
 
-    methods: {
-      getRoute(name, key) {
-        for(var i=0 ; i<this.$router.options.routes.length; i++) {
-          if (this.$router.options.routes[i].name == name ) {
-            return this.$router.options.routes[i].meta[key]
-          }
+  methods: {
+    getRoute(name, key) {
+      for (var i = 0; i < this.$router.options.routes.length; i++) {
+        if (this.$router.options.routes[i].name == name) {
+          return this.$router.options.routes[i].meta[key];
         }
-      },
-    },
-
+      }
+    }
   }
+};
 </script>
 
 <style>
-  a:hover {
-    text-decoration: none;
-  }
+a:hover {
+  text-decoration: none;
+}
 </style>

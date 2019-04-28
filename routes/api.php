@@ -18,5 +18,5 @@ use Illuminate\Http\Request;
 // });
 
 Route::group(['middleware' => ['api']], function(){
-    Route::resource('user', 'UserController');
+    Route::resource('book', 'BookController', ['except' => ['create', 'edit']]);
   });

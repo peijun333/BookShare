@@ -1778,16 +1778,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -1904,28 +1894,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vee_validate__WEBPACK_IMPORTED_MODULE_1__["default"]);
 /* harmony default export */ __webpack_exports__["default"] = ({
   $_veeValidate: {
-    validator: 'new'
+    validator: "new"
   },
   data: function data() {
     return {
       notifications: false,
       sound: true,
       widgets: false,
-      imageName: '',
-      imageUrl: '',
-      imageFile: '',
+      imageName: "",
+      imageUrl: "",
+      imageFile: "",
       select: null,
-      items: ['文学・評論', '人文・思想', '社会・政治', 'ノンフィクション', '歴史・地理', 'ビジネス・経済', '投資・金融・会社経営', '科学・テクノロジー', '医学・薬学', 'コンピュータ・IT', 'アート・建築・デザイン', '趣味・実用'],
+      items: ["文学・評論", "人文・思想", "社会・政治", "ノンフィクション", "歴史・地理", "ビジネス・経済", "投資・金融・会社経営", "科学・テクノロジー", "医学・薬学", "コンピュータ・IT", "アート・建築・デザイン", "趣味・実用"],
       value: [],
-      body: '',
+      body: "",
       custom: {
         select: {
-          required: 'カテゴリを選択してください'
+          required: "カテゴリを選択してください"
         }
       }
     };
@@ -1939,7 +1932,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vee_validate__WEBPACK_IMPORTED_MO
     this.initialize();
   },
   mounted: function mounted() {
-    this.$validator.localize('en', this.dictionary);
+    this.$validator.localize("en", this.dictionary);
   },
   methods: {
     initialize: function initialize() {},
@@ -1957,20 +1950,20 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vee_validate__WEBPACK_IMPORTED_MO
       if (files[0] !== undefined) {
         this.imageName = files[0].name;
 
-        if (this.imageName.lastIndexOf('.') <= 0) {
+        if (this.imageName.lastIndexOf(".") <= 0) {
           return;
         }
 
         var fr = new FileReader();
         fr.readAsDataURL(files[0]);
-        fr.addEventListener('load', function () {
+        fr.addEventListener("load", function () {
           _this.imageUrl = fr.result;
           _this.imageFile = files[0]; // this is an image file that can be sent to server...
         });
       } else {
-        this.imageName = '';
-        this.imageFile = '';
-        this.imageUrl = '';
+        this.imageName = "";
+        this.imageFile = "";
+        this.imageUrl = "";
       }
     },
     submit: function submit() {
@@ -2004,7 +1997,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'routerlink',
+  name: "routerlink",
   props: {
     linkname: String
   },
@@ -2072,11 +2065,11 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       drawer: false,
-      title: 'Book共有'
+      title: "ベータ"
     };
   },
   mounted: function mounted() {
-    console.log('AdminComponent mounted.');
+    console.log("AdminComponent mounted.");
 
     if (Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).MIX_FOOTER) {
       this.footer = Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).MIX_FOOTER;
@@ -48906,7 +48899,7 @@ var render = function() {
             { attrs: { "justify-center": "", fluid: "" } },
             [
               _c("v-flex", { attrs: { xs12: "", "offset-mx5": "" } }, [
-                _vm._v("\n        Home Component.\n      ")
+                _vm._v("Home Component.")
               ])
             ],
             1
@@ -90447,7 +90440,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // Vue
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuetify__WEBPACK_IMPORTED_MODULE_1___default.a, {
   theme: {
-    primary: '#1E88E5',
+    primary: "#1E88E5",
     secondary: vuetify_es5_util_colors__WEBPACK_IMPORTED_MODULE_2___default.a.blue.base,
     accent: vuetify_es5_util_colors__WEBPACK_IMPORTED_MODULE_2___default.a.amber.base
   }
@@ -90458,7 +90451,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuetify__WEBPACK_IMPORTED_MODULE_
  // Main app
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#app',
+  el: "#app",
   router: _router__WEBPACK_IMPORTED_MODULE_5__["default"]
 });
 
@@ -90492,7 +90485,7 @@ try {
 
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
  * all outgoing HTTP requests automatically have it attached. This is just
@@ -90502,9 +90495,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+  window.axios.defaults.headers.common["X-CSRF-TOKEN"] = token.content;
 } else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+  console.error("CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token");
 }
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
@@ -90836,18 +90829,18 @@ __webpack_require__.r(__webpack_exports__);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('switch-component', _components_SwitchComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]);
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('r-link', _components_RouterLink_vue__WEBPACK_IMPORTED_MODULE_3__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component("switch-component", _components_SwitchComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component("r-link", _components_RouterLink_vue__WEBPACK_IMPORTED_MODULE_3__["default"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
-  mode: 'history',
+  mode: "history",
   routes: [{
-    path: '/',
-    name: 'home',
+    path: "/",
+    name: "home",
     component: _components_HomeComponent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
     meta: {
-      name: 'ホーム',
-      icon: 'home'
+      name: "ホーム",
+      icon: "home"
     }
   }]
 }));

@@ -1778,6 +1778,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -1785,7 +1827,32 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      dialog: false
+      dialog: false,
+      cards: [{
+        title: "Java勉強はじめました",
+        category: "コンピュター・IT",
+        src: "https://image.gihyo.co.jp/assets/images/gdp/2018/978-4-297-10332-3.jpg"
+      }, {
+        title: "Favorite road trips",
+        category: "趣味・実用",
+        src: "https://cdn.vuetifyjs.com/images/cards/road.jpg"
+      }, {
+        title: "Best airlines",
+        category: "コンピュター・IT",
+        src: "https://cdn.vuetifyjs.com/images/cards/plane.jpg"
+      }, {
+        title: "Pre-fab homes",
+        category: "コンピュター・IT",
+        src: "https://cdn.vuetifyjs.com/images/cards/house.jpg"
+      }, {
+        title: "Favorite road trips",
+        category: "コンピュター・IT",
+        src: "https://cdn.vuetifyjs.com/images/cards/road.jpg"
+      }, {
+        title: "Best airlines",
+        category: "コンピュター・IT",
+        src: "https://cdn.vuetifyjs.com/images/cards/plane.jpg"
+      }]
     };
   },
   props: {},
@@ -48891,16 +48958,167 @@ var render = function() {
     "v-content",
     [
       _c(
-        "v-container",
-        { attrs: { fluid: "", "fill-height": "" } },
+        "v-layout",
+        { attrs: { "justify-center": "" } },
         [
           _c(
-            "v-layout",
-            { attrs: { "justify-center": "", fluid: "" } },
+            "v-flex",
+            { attrs: { xs12: "" } },
             [
-              _c("v-flex", { attrs: { xs12: "", "offset-mx5": "" } }, [
-                _vm._v("Home Component.")
-              ])
+              _c(
+                "v-card",
+                [
+                  _c(
+                    "v-container",
+                    { attrs: { fluid: "", "grid-list-md": "" } },
+                    [
+                      _c(
+                        "v-layout",
+                        { attrs: { row: "", wrap: "" } },
+                        _vm._l(_vm.cards, function(card) {
+                          return _c(
+                            "v-flex",
+                            {
+                              key: card.title,
+                              attrs: { xs12: "", sm6: "", md4: "" }
+                            },
+                            [
+                              _c(
+                                "v-card",
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    [
+                                      _c("span", {
+                                        staticClass: "title font-weight-bold",
+                                        domProps: {
+                                          textContent: _vm._s(card.title)
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("v-spacer"),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "text-xs-center" },
+                                        [
+                                          _c("v-chip", [
+                                            _vm._v(_vm._s(card.category))
+                                          ])
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-img", {
+                                    staticClass: "white",
+                                    attrs: {
+                                      src: card.src,
+                                      "max-height": "300",
+                                      contain: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-list-tile",
+                                        { staticClass: "grow" },
+                                        [
+                                          _c(
+                                            "v-list-tile-avatar",
+                                            {
+                                              attrs: { color: "grey darken-3" }
+                                            },
+                                            [
+                                              _c("v-img", {
+                                                attrs: {
+                                                  src:
+                                                    "https://yuruwork.com/wp-content/uploads/2018/05/CoJCckhUMAEkNqc.jpg"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-tile-content",
+                                            [
+                                              _c("v-list-tile-title", [
+                                                _vm._v("牧瀬紅莉栖")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-layout",
+                                            {
+                                              attrs: {
+                                                "align-center": "",
+                                                "justify-end": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("favorite")
+                                                  ])
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("bookmark")
+                                                  ])
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("share")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        }),
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
             ],
             1
           )

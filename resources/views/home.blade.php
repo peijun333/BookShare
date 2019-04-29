@@ -47,7 +47,7 @@
         @else
         <div id="app">
             <switch-component
-            name="{{ Auth::user()->email }}"
+            name="{{ Auth::user()->name }}"
             logout="{{ route('logout') }}">
             </switch-component>
         </div>

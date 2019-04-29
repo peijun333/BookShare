@@ -41,7 +41,7 @@ export default {
 
   data: () => ({
     drawer: false,
-    title: "ベータ"
+    title: "α版"
   }),
 
   mounted() {

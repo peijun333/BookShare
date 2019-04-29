@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Book;
 
 class BookController extends Controller
@@ -17,14 +18,26 @@ class BookController extends Controller
     $validatedData = $request->validate([
         'title' => 'required|string|max:50',
         'category' => 'required',
-        'file_name' => 'required',
+        'file_name' => 'image',
         'body' => 'required|string|max:120',
       ]);
 
     $books = new Book;
+
+    logger(Auth::user());
+
+    if(Auth::check()){
+      logger('ログインしています');
+    } else {
+      logger('ログインしていません');
+    }
+    //author_idは変更する
+    $books->author_id = 1;
     $books->title = $request->title;
     $books->category = $request->category;
-    $books->file_name = $request->file_name;
+
+    //SQLでfile_name消しとくか対策する
+    $books->file_name = 'hoge';
     $books->body = $request->body;
     $books->save();
     return $books;

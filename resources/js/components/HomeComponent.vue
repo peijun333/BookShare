@@ -8,7 +8,9 @@
               <v-flex v-for="card in cards" :key="card.title" xs12 sm6 md4>
                 <v-card>
                   <v-card-title>
-                    <span class="title font-weight-bold" v-text="card.title"></span>
+                    <router-link :to="{ name: 'post', params: { id: card.id} }">
+                      <span class="title font-weight-bold" v-text="card.title"></span>
+                    </router-link>
                     <v-spacer></v-spacer>
                     <div class="text-xs-center">
                       <v-chip>{{ card.category }}</v-chip>
@@ -65,32 +67,39 @@ export default {
       dialog: false,
       cards: [
         {
+          id: 1,
           title: "Java勉強はじめました",
           category: "コンピュター・IT",
           src:
             "https://image.gihyo.co.jp/assets/images/gdp/2018/978-4-297-10332-3.jpg"
         },
         {
-          title: "Favorite road trips",
+          id: 2,
+          title: "この本は読むべし",
           category: "趣味・実用",
-          src: "https://cdn.vuetifyjs.com/images/cards/road.jpg"
+          src:
+            "https://www.kinokuniya.co.jp/images/goods/ar2/web/imgdata2/large/41639/4163907955.jpg"
         },
         {
-          title: "Best airlines",
+          id: 3,
+          title: "Atcoderはじめます",
           category: "コンピュター・IT",
-          src: "https://cdn.vuetifyjs.com/images/cards/plane.jpg"
+          src: "https://pbs.twimg.com/media/D2kTwFQU4AEvtjK.jpg"
         },
         {
+          id: 4,
           title: "Pre-fab homes",
           category: "コンピュター・IT",
           src: "https://cdn.vuetifyjs.com/images/cards/house.jpg"
         },
         {
+          id: 5,
           title: "Favorite road trips",
           category: "コンピュター・IT",
           src: "https://cdn.vuetifyjs.com/images/cards/road.jpg"
         },
         {
+          id: 6,
           title: "Best airlines",
           category: "コンピュター・IT",
           src: "https://cdn.vuetifyjs.com/images/cards/plane.jpg"

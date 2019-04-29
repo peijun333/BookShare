@@ -9,6 +9,7 @@ Vue.component("switch-component", switch_component);
 Vue.component("r-link", r_link);
 
 import home from "../components/HomeComponent.vue";
+import book from "../components/BookComponent.vue";
 
 export default new Router({
     mode: "history",
@@ -21,6 +22,11 @@ export default new Router({
                 name: "ホーム",
                 icon: "home"
             }
+        },
+        {
+            path: "/post/:id",
+            name: "post",
+            component: book
         }
     ]
 });

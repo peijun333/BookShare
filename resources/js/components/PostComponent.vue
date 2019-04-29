@@ -15,7 +15,7 @@
         <v-list three-line subheader>
           <v-subheader>User Controls</v-subheader>
           <v-list-tile avatar>
-            <v-text-field label="タイトル" prepend-icon="title"></v-text-field>
+            <v-text-field v-model="title" label="タイトル" prepend-icon="title"></v-text-field>
           </v-list-tile>
           <v-list-tile avatar>
             <v-text-field
@@ -33,24 +33,6 @@
             >
           </v-list-tile>
           <v-list-tile avatar>
-            <!-- <v-select
-              v-model="value"
-              :items="items"
-              label="カテゴリ"
-              multiple
-              prepend-icon='category'
-            >
-             <template v-slot:selection="{ item, index }">
-             <v-chip v-if="index === 0">
-              <span>{{ item }}</span>
-             </v-chip>
-             <span
-               v-if="index === 1"
-               class="grey--text caption"
-             >(+{{ value.length - 1 }} others)
-             </span>
-             </template>
-            </v-select>-->
             <v-select
               v-model="select"
               v-validate="'required'"
@@ -95,13 +77,15 @@ export default {
   },
 
   data: () => ({
+    title: "",
+    select: null,
+    body: "",
     notifications: false,
     sound: true,
     widgets: false,
     imageName: "",
     imageUrl: "",
     imageFile: "",
-    select: null,
     items: [
       "文学・評論",
       "人文・思想",
@@ -117,7 +101,6 @@ export default {
       "趣味・実用"
     ],
     value: [],
-    body: "",
     custom: {
       select: {
         required: "カテゴリを選択してください"
@@ -145,7 +128,6 @@ export default {
     close() {
       this.$emit("update:dialog", false);
     },
-
     pickFile() {
       this.$refs.image.click();
     },
@@ -171,6 +153,12 @@ export default {
     },
     submit() {
       this.$validator.validateAll();
+      const data = new FormData();
+      data.append("title", this.title);
+      data.append("category", this.select);
+      data.append("file_name", this.imageFile);
+      data.append("body", this.body);
+      axios.post("api/book", data);
     }
   }
 };

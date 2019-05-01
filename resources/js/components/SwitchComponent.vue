@@ -36,6 +36,7 @@
 export default {
   props: {
     name: String,
+    id: 0,
     logout: String
   },
 
@@ -46,6 +47,8 @@ export default {
 
   mounted() {
     console.log("AdminComponent mounted.");
+    this.$store.commit("setUserId", { user_id: this.id });
+    console.log(this.$store.state.id);
 
     if (process.env.MIX_FOOTER) {
       this.footer = process.env.MIX_FOOTER;

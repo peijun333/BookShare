@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Laravel5.7 + Vue.js2.5</title>
+        <title>α版</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -27,8 +27,9 @@
     <body>
         <div id="app">
             <switch-component
-            name="{{ Auth::user()->name }}"
-            logout="{{ route('logout') }}">
+                name="{{ Auth::user()->name }}"
+                id="{{ Auth::user()->id }}"
+                logout="{{ route('logout') }}">
             </switch-component>
         </div>
         <script src=" {{ mix('js/app.js') }} "></script>

@@ -8,11 +8,11 @@ use App\Book;
 
 class BookController extends Controller
 {
+
   public function index()
   {
-    $books = new Book;
-    return $books;
   }
+
   public function store(Request $request)
   {
     $validatedData = $request->validate([
@@ -23,16 +23,7 @@ class BookController extends Controller
       ]);
 
     $books = new Book;
-
-    logger(Auth::user());
-
-    if(Auth::check()){
-      logger('ログインしています');
-    } else {
-      logger('ログインしていません');
-    }
-    //author_idは変更する
-    $books->author_id = 1;
+    $books->author_id = $request->author_id;
     $books->title = $request->title;
     $books->category = $request->category;
 
@@ -41,5 +32,12 @@ class BookController extends Controller
     $books->body = $request->body;
     $books->save();
     return $books;
+  }
+  public function update()
+  {
+  }
+
+  public function destroy()
+  {
   }
 }

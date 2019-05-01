@@ -17,15 +17,8 @@
 
 Auth::routes();
 
-// Route::get('/', function () {
-//     return view('home');
-// })->middleware('auth');
-
-Route::group(['middleware' => ['auth']], function () {
-    // この中はログインされている場合のみルーティングされる
-    Route::get('/', function () {
-        return view('home');
-    });
-});
+Route::get('/', function () {
+    return view('home');
+})->middleware('auth');
 
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');

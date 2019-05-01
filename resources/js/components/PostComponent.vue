@@ -143,7 +143,7 @@ export default {
         fr.readAsDataURL(files[0]);
         fr.addEventListener("load", () => {
           this.imageUrl = fr.result;
-          this.imageFile = files[0]; // this is an image file that can be sent to server...
+          this.imageFile = files[0];
         });
       } else {
         this.imageName = "";
@@ -154,6 +154,7 @@ export default {
     submit() {
       this.$validator.validateAll();
       const data = new FormData();
+      data.append("author_id", this.$store.state.user_id);
       data.append("title", this.title);
       data.append("category", this.select);
       data.append("file_name", this.imageFile);

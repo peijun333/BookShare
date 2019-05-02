@@ -157,7 +157,7 @@ export default {
       data.append("author_id", this.$store.state.user_id);
       data.append("title", this.title);
       data.append("category", this.select);
-      data.append("file_name", this.imageFile);
+      data.append("image_file", this.imageFile);
       data.append("body", this.body);
       axios.post("api/book", data);
     }

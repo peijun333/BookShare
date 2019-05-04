@@ -17,6 +17,8 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
+Route::get('book/entry/{id}', 'BookController@entry');
+
 Route::group(['middleware' => ['api']], function(){
     Route::resource('book', 'BookController', ['except' => ['create', 'edit']]);
   });

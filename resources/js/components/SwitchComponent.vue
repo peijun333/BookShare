@@ -3,6 +3,7 @@
     <v-navigation-drawer v-model="drawer" clipped fixed app>
       <v-list dense>
         <r-link linkname="home"></r-link>
+        <r-link linkname="profile"></r-link>
       </v-list>
     </v-navigation-drawer>
 

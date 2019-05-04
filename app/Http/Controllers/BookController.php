@@ -47,4 +47,14 @@ class BookController extends Controller
   public function destroy()
   {
   }
+
+  public function entry($id)
+  {
+    $entry = DB::table('books')
+    ->join('users', 'books.author_id', '=', 'users.id')
+    ->select('users.name', 'books.title', 'books.category', 'books.body', 'books.file_name')
+    ->where('books.id', '=', $id)
+    ->get();
+    return $entry;
+  }
 }

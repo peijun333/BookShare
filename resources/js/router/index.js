@@ -9,7 +9,8 @@ Vue.component("switch-component", switch_component);
 Vue.component("r-link", r_link);
 
 import home from "../components/HomeComponent.vue";
-import book from "../components/BookComponent.vue";
+import profile from "../components/ProfileComponent.vue";
+import entry from "../components/EntryComponent.vue";
 
 export default new Router({
     mode: "history",
@@ -24,9 +25,18 @@ export default new Router({
             }
         },
         {
-            path: "/post/:id",
-            name: "post",
-            component: book
+            path: "/profile",
+            name: "profile",
+            component: profile,
+            meta: {
+                name: "プロフィール",
+                icon: "face"
+            }
+        },
+        {
+            path: "/entry/:id",
+            name: "entry",
+            component: entry
         }
     ]
 });

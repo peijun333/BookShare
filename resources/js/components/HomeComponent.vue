@@ -8,7 +8,7 @@
               <v-flex v-for="item in items" :key="item.id" xs12 sm6 md4>
                 <v-card>
                   <v-card-title>
-                    <router-link :to="{ name: 'post', params: { id: item.id} }">
+                    <router-link :to="{ name: 'entry', params: { id: item.id} }">
                       <span class="title font-weight-bold" v-text="item.title"></span>
                     </router-link>
                     <v-spacer></v-spacer>
@@ -16,8 +16,6 @@
                       <v-chip>{{ item.category }}</v-chip>
                     </div>
                   </v-card-title>
-
-                  <!-- v-imgはバインドさせる ex) :src={{ item.src }} -->
                   <v-img
                     :src="'storage/cavers/'+item.file_name"
                     max-height="300"
@@ -28,20 +26,16 @@
                     <v-list-tile class="grow">
                       <v-list-tile-avatar color="grey darken-3">
                         <v-img
-                          src="http://articleimage.nicoblomaga.jp/image/61/2013/7/b/7b59e194d300f38f4bb9e0ddaa18138f7df816c81387012094.jpg"
+                          src="https://iwiz-chie.c.yimg.jp/im_sigg_bkt5bJ7Faz4GqIUfbOHxg---x320-y320-exp5m-n1/d/iwiz-chie/que-12156876337"
                         ></v-img>
                       </v-list-tile-avatar>
 
                       <v-list-tile-content>
                         <v-list-tile-title>{{ item.name }}</v-list-tile-title>
                       </v-list-tile-content>
-
                       <v-layout align-center justify-end>
                         <v-btn icon>
                           <v-icon>favorite</v-icon>
-                        </v-btn>
-                        <v-btn icon>
-                          <v-icon>bookmark</v-icon>
                         </v-btn>
                         <v-btn icon>
                           <v-icon>share</v-icon>

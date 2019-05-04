@@ -19,6 +19,13 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('home');
-})->middleware('auth');
+});
 
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+
+// ログインURL
+Route::get('auth/twitter', 'Auth\TwitterController@redirectToProvider');
+// コールバックURL
+Route::get('auth/twitter/callback', 'Auth\TwitterController@handleProviderCallback');
+// ログアウトURL
+Route::get('auth/twitter/logout', 'Auth\TwitterController@logout');

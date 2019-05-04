@@ -1866,6 +1866,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -49591,146 +49592,164 @@ var render = function() {
                       _c(
                         "v-layout",
                         { attrs: { row: "", wrap: "" } },
-                        _vm._l(_vm.items, function(item) {
-                          return _c(
-                            "v-flex",
-                            {
-                              key: item.id,
-                              attrs: { xs12: "", sm6: "", md4: "" }
-                            },
-                            [
-                              _c(
-                                "v-card",
-                                [
-                                  _c(
-                                    "v-card-title",
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to: {
-                                              name: "entry",
-                                              params: { id: item.id }
-                                            }
-                                          }
-                                        },
-                                        [
-                                          _c("span", {
-                                            staticClass:
-                                              "title font-weight-bold",
-                                            domProps: {
-                                              textContent: _vm._s(item.title)
-                                            }
-                                          })
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("v-spacer"),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "text-xs-center" },
-                                        [
-                                          _c("v-chip", [
-                                            _vm._v(_vm._s(item.category))
-                                          ])
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c("v-img", {
-                                    staticClass: "white",
-                                    attrs: {
-                                      src: "storage/cavers/" + item.file_name,
-                                      "max-height": "300",
-                                      contain: ""
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-card-actions",
-                                    [
-                                      _c(
-                                        "v-list-tile",
-                                        { staticClass: "grow" },
-                                        [
-                                          _c(
-                                            "v-list-tile-avatar",
-                                            {
-                                              attrs: { color: "grey darken-3" }
-                                            },
-                                            [
-                                              _c("v-img", {
-                                                attrs: {
-                                                  src:
-                                                    "https://iwiz-chie.c.yimg.jp/im_sigg_bkt5bJ7Faz4GqIUfbOHxg---x320-y320-exp5m-n1/d/iwiz-chie/que-12156876337"
-                                                }
-                                              })
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-list-tile-content",
-                                            [
-                                              _c("v-list-tile-title", [
-                                                _vm._v(_vm._s(item.name))
-                                              ])
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-layout",
-                                            {
-                                              attrs: {
-                                                "align-center": "",
-                                                "justify-end": ""
+                        [
+                          _vm._v(
+                            "\n            " +
+                              _vm._s(_vm.items) +
+                              "\n            "
+                          ),
+                          _c("a", { attrs: { href: "/auth/twitter" } }, [
+                            _vm._v("ログイン")
+                          ]),
+                          _vm._v(" "),
+                          _c("a", { attrs: { href: "/auth/twitter/logout" } }, [
+                            _vm._v("ログアウト")
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(_vm.items, function(item) {
+                            return _c(
+                              "v-flex",
+                              {
+                                key: item.id,
+                                attrs: { xs12: "", sm6: "", md4: "" }
+                              },
+                              [
+                                _c(
+                                  "v-card",
+                                  [
+                                    _c(
+                                      "v-card-title",
+                                      [
+                                        _c(
+                                          "router-link",
+                                          {
+                                            attrs: {
+                                              to: {
+                                                name: "entry",
+                                                params: { id: item.id }
                                               }
-                                            },
-                                            [
-                                              _c(
-                                                "v-btn",
-                                                { attrs: { icon: "" } },
-                                                [
-                                                  _c("v-icon", [
-                                                    _vm._v("favorite")
-                                                  ])
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-btn",
-                                                { attrs: { icon: "" } },
-                                                [
-                                                  _c("v-icon", [
-                                                    _vm._v("share")
-                                                  ])
-                                                ],
-                                                1
-                                              )
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        }),
-                        1
+                                            }
+                                          },
+                                          [
+                                            _c("span", {
+                                              staticClass:
+                                                "title font-weight-bold",
+                                              domProps: {
+                                                textContent: _vm._s(item.title)
+                                              }
+                                            })
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("v-spacer"),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "text-xs-center" },
+                                          [
+                                            _c("v-chip", [
+                                              _vm._v(_vm._s(item.category))
+                                            ])
+                                          ],
+                                          1
+                                        )
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c("v-img", {
+                                      staticClass: "white",
+                                      attrs: {
+                                        src: "storage/cavers/" + item.file_name,
+                                        "max-height": "300",
+                                        contain: ""
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-card-actions",
+                                      [
+                                        _c(
+                                          "v-list-tile",
+                                          { staticClass: "grow" },
+                                          [
+                                            _c(
+                                              "v-list-tile-avatar",
+                                              {
+                                                attrs: {
+                                                  color: "grey darken-3"
+                                                }
+                                              },
+                                              [
+                                                _c("v-img", {
+                                                  attrs: {
+                                                    src:
+                                                      "storage/profile_images/" +
+                                                      item.avatar
+                                                  }
+                                                })
+                                              ],
+                                              1
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "v-list-tile-content",
+                                              [
+                                                _c("v-list-tile-title", [
+                                                  _vm._v(_vm._s(item.name))
+                                                ])
+                                              ],
+                                              1
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "v-layout",
+                                              {
+                                                attrs: {
+                                                  "align-center": "",
+                                                  "justify-end": ""
+                                                }
+                                              },
+                                              [
+                                                _c(
+                                                  "v-btn",
+                                                  { attrs: { icon: "" } },
+                                                  [
+                                                    _c("v-icon", [
+                                                      _vm._v("favorite")
+                                                    ])
+                                                  ],
+                                                  1
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "v-btn",
+                                                  { attrs: { icon: "" } },
+                                                  [
+                                                    _c("v-icon", [
+                                                      _vm._v("share")
+                                                    ])
+                                                  ],
+                                                  1
+                                                )
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          })
+                        ],
+                        2
                       )
                     ],
                     1

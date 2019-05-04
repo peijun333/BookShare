@@ -26,11 +26,15 @@
     </head>
     <body>
         <div id="app">
+        @guest
+            <switch-component></switch-component>
+        @else  
             <switch-component
                 name="{{ Auth::user()->name }}"
                 id="{{ Auth::user()->id }}"
                 logout="{{ route('logout') }}">
             </switch-component>
+        @endguest
         </div>
         <script src=" {{ mix('js/app.js') }} "></script>
     </body>

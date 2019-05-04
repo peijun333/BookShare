@@ -5,6 +5,9 @@
         <v-card>
           <v-container fluid grid-list-md>
             <v-layout row wrap>
+              {{ items }}
+              <a href="/auth/twitter">ログイン</a>
+              <a href="/auth/twitter/logout">ログアウト</a>
               <v-flex v-for="item in items" :key="item.id" xs12 sm6 md4>
                 <v-card>
                   <v-card-title>
@@ -25,9 +28,7 @@
                   <v-card-actions>
                     <v-list-tile class="grow">
                       <v-list-tile-avatar color="grey darken-3">
-                        <v-img
-                          src="https://iwiz-chie.c.yimg.jp/im_sigg_bkt5bJ7Faz4GqIUfbOHxg---x320-y320-exp5m-n1/d/iwiz-chie/que-12156876337"
-                        ></v-img>
+                        <v-img :src="'storage/profile_images/'+item.avatar"></v-img>
                       </v-list-tile-avatar>
 
                       <v-list-tile-content>

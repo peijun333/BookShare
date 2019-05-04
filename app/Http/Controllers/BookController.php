@@ -14,7 +14,7 @@ class BookController extends Controller
   {
     $posted = DB::table('books')
     ->join('users', 'books.author_id', '=', 'users.id')
-    ->select('books.id', 'users.name', 'books.title', 'books.category', 'books.file_name')
+    ->select('users.avatar', 'books.id', 'users.name', 'books.title', 'books.category', 'books.file_name')
     ->get();
     return $posted;
   }
